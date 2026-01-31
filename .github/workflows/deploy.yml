@@ -62,3 +62,4 @@ jobs:
             echo "${{ secrets.ENV_FILE }}" > backend/.env
             docker compose pull
             docker compose up -d
+            
