@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  backend:
+    image:  devashish2003/brainly-backend:latest
+    container_name: brainly-backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    restart: unless-stopped
+    networks:
+      - brainly-net
+
+  frontend:
+    image:  devashish2003/brainly-frontend:latest
+    container_name: brainly-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - brainly-net
+
+networks:
+  brainly-net:
+    driver: bridge
