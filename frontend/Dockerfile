@@ -15,4 +15,4 @@ EXPOSE 5173
 
 # Start frontend server
 # For Vite:
-CMD ["npm", "start", "preview", "--", "--host"]
+CMD ["npm", "run", "start"]
