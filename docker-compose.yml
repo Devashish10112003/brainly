@@ -7,7 +7,7 @@ services:
     ports:
       - "5000:5000"
     env_file:
-      - ./backen/.env
+      - ./backend/.env
     restart: unless-stopped
     networks:
       - brainly-net
