@@ -60,6 +60,5 @@ jobs:
           script: |
             cd ~/brainly
             git pull origin main
-            echo "${{ secrets.ENV_FILE }}" > .env
             docker compose pull
             docker compose up -d
