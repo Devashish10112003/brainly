@@ -58,8 +58,8 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            git pull origin main
             cd ~/brainly
+            git pull origin main
             echo "${{ secrets.ENV_FILE }}" > backend/.env
             docker compose pull
             docker compose up -d
