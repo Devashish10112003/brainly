@@ -17,8 +17,6 @@ services:
     container_name: brainly-frontend
     ports:
       - "5173:5173"
-    env_file:
-      - .env
     depends_on:
       - backend
     restart: unless-stopped
