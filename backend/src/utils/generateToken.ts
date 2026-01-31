@@ -8,8 +8,8 @@ export function generateTokenAndSetCookies(userId:String,res:Response){
     res.cookie("jwt-second-brain",token,{
         maxAge: 30*24*60*60*1000,
         httpOnly:true,
-        sameSite:"none",
-        secure: true,
+        sameSite:"lax",
+        secure: false,
     });
 
     return token;
