@@ -47,6 +47,8 @@ jobs:
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/brainly-frontend:latest
             ${{ secrets.DOCKER_USERNAME }}/brainly-frontend:${{ github.sha }}
+          build-args: |
+            VITE_BACKEND_URL=${{ secrets.VITE_BACKEND_URL }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
